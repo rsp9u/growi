@@ -15,7 +15,7 @@
   {% include '../widget/favicon.html' %}
 
   {{ customHeader() }}
-
+  <img src>
   <!-- polyfills for IE11 -->
   <script>
     var userAgent = window.navigator.userAgent.toLowerCase();
@@ -118,7 +118,9 @@
   data-current-username="{% if user %}{{ user.username }}{% endif %}"
   data-userlang="{% if user %}{{ user.lang }}{% endif %}"
  >
-
+<div align = "center">
+  <Marquee direction="up" scrollaomunt="4"> <img src="/images/staffcredit/test.svg" width="500" height="500"> </Marquee>
+</div>
 <div id="wrapper">
   <!-- Navigation -->
   {% block layout_head_nav %}
