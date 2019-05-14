@@ -118,6 +118,9 @@
   data-current-username="{% if user %}{{ user.username }}{% endif %}"
   data-userlang="{% if user %}{{ user.lang }}{% endif %}"
  >
+ <div class = 'test-scroll'>
+ <img src="/images/staffcredit/test.svg" width="500" height="500">
+ </div>
   <!-- Navigation -->
   {% block layout_head_nav %}
   <nav class="navbar navbar-default navbar-static-top mb-0">
@@ -195,8 +198,6 @@
       </ul>
     </div><!-- /.navbar-header -->
   </nav>
-  <Marquee direction="up" scrollaomunt="4"></div><img src="/images/staffcredit/test.svg" width="500" height="500"> </div> </Marquee>
-  <div id="wrapper">  
   {% include '../modal/create_page.html' %}
   {% endblock  %} {# layout_head_nav #}
 
@@ -229,9 +230,6 @@
 </div><!-- /#wrapper -->
 
 {% include '../modal/shortcuts.html' %}
-<div class = 'test-scroll'>
-  <Marquee direction="up" scrollaomunt="4"> <div align = "center"> </div><img src="/images/staffcredit/test.svg" width="500" height="500"> </div> </Marquee>
-</div>
 {% block body_end %}
 {% endblock %}
 </body>

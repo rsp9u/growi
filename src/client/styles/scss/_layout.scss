@@ -1,3 +1,4 @@
+@import '../scss/keyframe';
 .main-container {
   h1,
   h2,
@@ -59,16 +60,38 @@
       padding: 15px 15px 0 15px;
     }
   }
-  
-  .test-scroll {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 1040;
-    padding: 15px 30px;
-    text-align: center;
-    width: 300px;
-  }
 
+  .testscroll {
+    /*margin: auto;
+    padding: 1%;
+    position: fixed;
+    z-index: 9999999;
+    text-align: center;*/
+    margin     : auto;
+    padding    : 1%;
+    border     : 1px solid #666;
+    background : #fff;
+    overflow   : hidden;
+    z-index: 9999999;
+  }
+  .testscroll-animated{
+    display     : inline-block;
+    padding-left: 100%;
+    //-webkit-animation-duration: 3s;
+    -webkit-animation-name: scrollAnimation 3s linear infinite;
+    //-webkit-transition: 3s all;
+    //animation-duration: 3s;
+    animation-name   : scrollAnimation 3s linear infinite;
+    //transition: 3s all;
+  }
+  @-webkit-keyframes scrollAnimation {
+    0% { transform: translateX(0)}
+    100% { transform: translateX(-100%)}
+  }
+  @keyframes scrollAnimation {
+    0% { transform: translateX(0)}
+    100% { transform: translateX(-100%)}
+  }
   .layout-control {
     position: fixed;
     right: 25%;
