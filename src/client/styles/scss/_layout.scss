@@ -63,6 +63,7 @@
   .test-scroll {
     position: absolute;
     transform: translate(-50%, -50%);
+    z-index: 1040;
     padding: 15px 30px;
     text-align: center;
     width: 300px;
