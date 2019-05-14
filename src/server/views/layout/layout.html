@@ -117,11 +117,6 @@
   data-current-username="{% if user %}{{ user.username }}{% endif %}"
   data-userlang="{% if user %}{{ user.lang }}{% endif %}"
  >
-  {% block scrollimage %}
-  <div class = 'testscroll'>
-    <img src="/images/staffcredit/test.svg">
-  </div>
-  {% endblock %}
   <!-- Navigation -->
   {% block layout_head_nav %}
   <nav class="navbar navbar-default navbar-static-top mb-0">
@@ -147,7 +142,6 @@
           </span>
         </a>
       </div>
-
       <ul class="nav navbar-top-links navbar-left hidden-xs">
         <li>
           <a class="open-close hidden-xs waves-effect waves-light">
@@ -160,7 +154,6 @@
           {% endif %}
         </li>
       </ul>
-
       <ul class="nav navbar-top-links navbar-right pull-right">
         {% if user and user.admin %}
         <li class="nav-item-admin">
@@ -169,7 +162,6 @@
           </a>
         </li>
         {% endif %}
-
         {% if user %}
         <li class="nav-item-create-page">
           <a href="#" data-target="#create-page" data-toggle="modal" class="create-page">
@@ -203,7 +195,11 @@
   {% endblock  %} {# layout_head_nav #}
 
   {% block head_warn %}{% endblock %}
-
+  {% block scrollimage %}
+  <div class = "testscroll">
+  <img src="/images/staffcredit/test.svg" width="300" height="300" align="center">
+  </div>
+  {% endblock %}
   {% block sidebar %}
   <!-- Left navbar-header -->
   <div class="navbar-default sidebar hidden-print" role="navigation">
@@ -235,7 +231,6 @@
 {% endblock %}
 </body>
 {% endblock %}
-
 <script type="application/json" id="crowi-context-hydrate">
 {{ local_config|json|safe }}
 </script>
