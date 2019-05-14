@@ -62,36 +62,46 @@
   }
 
   .testscroll {
-    /*margin: auto;
-    padding: 1%;
     position: fixed;
     z-index: 9999999;
-    text-align: center;*/
-    margin     : auto;
-    padding    : 1%;
-    border     : 1px solid #666;
-    background : #fff;
-    overflow   : hidden;
+    border: 1px solid #666;
+    background: #fff;
+    overflow: hidden;
     z-index: 9999999;
-  }
-  .testscroll-animated{
-    display     : inline-block;
+    display: inline-block;
     padding-left: 100%;
-    //-webkit-animation-duration: 3s;
-    -webkit-animation-name: scrollAnimation 3s linear infinite;
-    //-webkit-transition: 3s all;
-    //animation-duration: 3s;
-    animation-name   : scrollAnimation 3s linear infinite;
-    //transition: 3s all;
+    animation: scroll-img 3s infinite linear;
+    -o-animation: scroll-img 3s infinite linear;
+    -ms-animation: scroll-img 3s infinite linear;
+    -webkit-animation: scroll-img 3s infinite linear;
+    -moz-animation: scroll-img 3s infinite linear;
   }
-  @-webkit-keyframes scrollAnimation {
-    0% { transform: translateX(0)}
-    100% { transform: translateX(-100%)}
+  .scroll-layout {
+    display: inline-block;
+    width: 100px;
   }
-  @keyframes scrollAnimation {
-    0% { transform: translateX(0)}
-    100% { transform: translateX(-100%)}
+
+  @keyframes scroll-img {
+    0% { transform: translateY(100%)}
+    100% { transform: translateY(-100%)}
   }
+  @-o-keyframes scroll-img {
+    0% { -o-transform: translateY(100%)}
+    100% { -o-transform: translateY(-100%)}
+  }
+  @-ms-keyframes scroll-img {
+    0% { -ms-transform: translateY(100%)}
+    100% { -ms-transform: translateY(-100%)}
+  }
+  @-webkit-keyframes scroll-img {
+    0% { -webkit-transform: translateY(100%)}
+    100% { -webkit-transform: translateY(-100%)}
+  }
+  @-moz-keyframes scroll-img {
+    0% { -moz-transform: translateY(100%)}
+    100% { -moz-transform: translateY(-100%)}
+  }
+
   .layout-control {
     position: fixed;
     right: 25%;

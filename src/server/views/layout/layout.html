@@ -26,7 +26,6 @@
       headElement.appendChild(scriptElement);
     }
   </script>
-
   {{ cdnScriptTagsByGroup('basis') }}
 
   {% if local_config.env.MATHJAX %}
@@ -99,7 +98,7 @@
   {{ cdnHighlightJsStyleTag(highlightJsStyle()) }}
 
   {% block html_additional_headers %}{% endblock %}
-
+  
   <style>
     {{ customCss() }}
   </style>
@@ -118,9 +117,11 @@
   data-current-username="{% if user %}{{ user.username }}{% endif %}"
   data-userlang="{% if user %}{{ user.lang }}{% endif %}"
  >
- <div class = 'test-scroll'>
- <img src="/images/staffcredit/test.svg" width="500" height="500">
- </div>
+  {% block scrollimage %}
+  <div class = 'testscroll'>
+    <img src="/images/staffcredit/test.svg">
+  </div>
+  {% endblock %}
   <!-- Navigation -->
   {% block layout_head_nav %}
   <nav class="navbar navbar-default navbar-static-top mb-0">
@@ -244,5 +245,4 @@
   {{ customScript() }}
 </script>
 {% endblock %}
-
 </html>
