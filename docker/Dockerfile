@@ -21,6 +21,8 @@ RUN yarn config set network-timeout 300000
 RUN yarn
 # install official plugins
 RUN yarn add growi-plugin-lsx growi-plugin-pukiwiki-like-linker growi-plugin-attachment-refs
+# install additional plugins
+RUN yarn add growi-plugin-schedaus
 # install peerDependencies
 RUN yarn add -D react-images@1.0.0 react-motion
 
