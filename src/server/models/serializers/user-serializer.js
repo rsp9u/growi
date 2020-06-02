@@ -19,6 +19,10 @@ function serializeUserSecurely(user) {
     serialized = user.toObject();
   }
 
+  if (serialized._id) {
+    serialized.id = serialized._id;
+  }
+
   omitInsecureAttributes(serialized);
 
   return serialized;
